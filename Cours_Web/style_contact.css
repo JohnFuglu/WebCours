@@ -1,0 +1,11 @@
+#contact{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20%;
+}
+#bouton_envoyer{
+    object-position: center;
+}

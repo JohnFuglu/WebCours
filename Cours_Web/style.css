@@ -1,0 +1,30 @@
+#boite_centrale{
+    padding: 5em;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;}
+#boiteDessin{ border: 5px solid cyan;}
+#imgDessin{
+    max-height: var(auto,--tailleMax);
+}
+#boiteModelage{    border: 5px solid red;}
+#imgModelage{
+
+    max-height: 500px;
+}
+#boitePixel{    border: 5px dotted orange;    
+}
+#imgPixel{
+max-height: var(--sculptTaille);
+}
+#boiteSculpture{ border: 10px dashed blueviolet;}
+#imgSculpture{
+    max-height: var(--tailleMax);
+}
+.truc{
+    --tailleMax:0px;
+}
