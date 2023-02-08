@@ -1,0 +1,33 @@
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="formulaire.css">
+    </head>
+<body>
+    <h2>Formulaire de test</h2>
+    <div id="flex">
+    <label for="noms">Envoyer un message</label>
+    <select name="Noms" id="noms">
+        <option>Jean</option>
+        <option>Paul</option>
+        <option>Pierre</option>
+        <option>Truc</option>
+        <option selected="Selected">Truc</option>
+    </select>
+
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" value="une@mail" size= "60"/>
+
+    <label for="texte">Texte</label>
+    <textarea cols="10" rows="6" name="corps_du_message">Ceci est un message type</textarea>
+    <label for="bouton">Envoyer</label>
+    <input type="button" value="envoyer" id="bouton">
+    </div>
+
+    <div id="suite">
+        <label for="file">Fichier</label>
+        <input type="file" id="file">
+    </div>
+</body>
+</html>

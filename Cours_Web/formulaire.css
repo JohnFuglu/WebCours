@@ -1,0 +1,18 @@
+label, h2{
+    font-family: fantasy;
+    font-style: oblique;
+}
+#exemple{
+    font-style: italic;
+}
+#flex{
+    display: flex;
+    flex-direction: column;
+    margin: 20%
+}
+#bouton{
+   background-color: aqua
+}
+#suite{
+    font-family: serif
+}
