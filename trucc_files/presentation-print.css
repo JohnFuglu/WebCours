@@ -1,0 +1,13 @@
+
+/* la couleur de bord est un test pour essayer de déterminer dans quel mode on est...*/
+body {border-color:rgb(0,0,0);}
+
+pre {border: 0.05em solid; background-color: white;}
+
+/* la barre de navigation n'est pas vraiment indispensable à l'impression.... le numéro de la page
+ * affichée non plus.
+ */
+
+#pageNumber, .nav {display: none;}
+
+.page {display: block;}

@@ -1,0 +1,89 @@
+
+
+// Montre le code d'une section HTML du document en cours.
+// divId : id de la section dont on veut montrer le code
+// destId : id de la zone où le code doit apparaître
+function montreCode(divId,destId) {
+	var text= document.getElementById(divId).innerHTML;
+	var n= document.createTextNode(text);
+	var dest=document.getElementById(destId);
+	dest.appendChild(n);
+}
+
+
+// remplace une section HTML du document en cours
+// par le texte de son code.
+// divId : id de la section dont on veut montrer le code
+//pb on pert la mise en page et potentielement la validation
+function remplaceParCode(divId) {
+  var section=document.getElementById(divId);
+  var text= section.innerHTML;
+  var n= document.createTextNode(text);
+  while (section.firstChild) {
+    section.removeChild(section.firstChild);
+  }
+  section.appendChild(n);
+}
+
+// Affiche le contenu d'un fichier dans un élément.
+// destId : id de l'élément qui affichera le fichier
+// url : url du fichier (normalement sur le même site que le document en cours).
+function chargeFichier(destId, url) {
+    $.ajax({ type: "GET", url: url, dataType: "html",
+    	     success : function (txt) {
+    		 var n= document.createTextNode(txt);
+    		 var dest=document.getElementById(destId);
+		 dest.appendChild(n);
+    	     }
+    	   })
+}
+
+function chargeSousFichier(destId, url, i1, i2,concl) {
+    $.ajax({ type: "GET", url: url, dataType: "html",
+    	     success : function (txt) {
+		 txt= getLignes(txt, i1, i2);
+                 concl=concl?"\n"+concl:"";
+                 var n= document.createTextNode(txt+"\n"+concl);
+    		 var dest=document.getElementById(destId);
+		 dest.appendChild(n);
+    	     }
+    	   })    
+}
+
+function getLignes(txt, i1, i2) {
+  
+    var l= txt.split("\n");
+    if (i2 === undefined) {
+	i2= l.length;
+    } else if (i2 < 0) {
+	i2= l.length + i2;
+    }
+    var res= "";
+    for (var i= i1; i < i2; i++) {
+	res= res + l[i]+ "\n";
+    }
+
+    return res;
+}
+// Affiche le contenu des script de class showCode
+function showCode() {
+
+  //html5
+  // a=document.querySelectorAll(".showCode");
+  //jquery
+  a=$('.showCode');
+  for(i = 0;  i< a.length;i++){
+    var ai=a[i];
+    var p=ai.parentNode;
+    p.removeChild(ai);
+   var pre=document.createElement("pre");
+    var regTab=new RegExp("(<)", "g");
+    //parse les commentaires /* ... */
+    var regCom=new RegExp("(/\\*.*?\\*/)", "g");
+    var text=ai.firstChild.data;
+    var n= document.createTextNode(text.replace(regCom,""));
+    alert(text.replace(regCom,"DEBUG"));
+    pre.appendChild(n);
+    p.appendChild(pre);
+  }
+}

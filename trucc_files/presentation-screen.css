@@ -1,0 +1,11 @@
+/* Présentation à l'ecran. On cache les pages pour n'en montrer qu'une seule à la fois.*/
+
+/* la couleur de bord est un test pour essayer de déterminer dans quel mode on est...*/
+body {border-color:rgb(0,0,255);}
+
+.page {display: none}
+
+pre		{
+		 background-color: #F0F0F0;
+		 outline: dotted;
+		}

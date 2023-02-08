@@ -1,0 +1,33 @@
+body{
+    background-color: yellow;
+    color: green;
+}
+h1{
+    text-align: center;
+    background-color: red;
+}
+ol{
+    list-style-type: upper-roman;
+}
+p{
+    border-style: solid;
+    border-color: black;
+}
+li+li{display: none;}
+li+li+*{display: list-item;}
+.rate{
+    font-style: italic;
+}
+.rate span{
+    font-size: 24px;
+}
+#seconddiv{
+    position: absolute;
+    top:90px;right:40px;
+    border-style: dotted;
+    border-color: black;
+}
+#premierPara{
+    background-color: pink;
+}
+
