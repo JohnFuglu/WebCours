@@ -1,29 +1,32 @@
 <!DOCTYPE html>
+
 <html lang="fr">
     <head>
         <title>Contact</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style_contact.css">
-    </head>
-    
+        <link rel="javascript" href="/javascript/contact.js">
+    </head>    
     <body>
-        <h2>Le formulaire</h2>
-        <div id="contact">
-           <label for="contacts">Contacts</label>
-           <select name="contacts" id="contacts">
-            <option>Jean</option>
-            <option>Pierre</option>
-            <option>Jojo</option>
-            <option selected="selected">Jean</option>
-           </select>
-            <label for="adresse_mail">Email</label>
-           <input type="text" name="adresse" id="adresse_mail" value="uneadresse@mail.com" 
-           size="60">Donnez votre adresse mail
-           <label for="text_area">Entrez votre message</label>
-           <textarea id="text_area"></textarea>
-           <input type="button" name="envoyer" id="bouton_envoyer" value="Envoyer">
-          </div>
-       
+        <form action="" method="post">
+            <h2 id="titre">Le formulaire</h2>
+            <div id="contact">
+                <label id="labelContacts" for="contacts">Contacts</label>
+                <select name="contacts" id="contacts">
+                    <option>Jean</option>
+                    <option>Pierre</option>
+                    <option>Jojo</option>
+                    <option selected="selected">Jean</option>
+                </select>
+                <label for="adresse_mail">Email</label>
+                <input type="email" name="adresse" id="adresse_mail" value="uneadresse@mail.com" 
+                    size="60">Donnez votre adresse mail
+                <label for="text_area">Entrez votre message</label>
+                <textarea id="text_area" name="message"></textarea>
+                <button type="submit" name="envoyer" id="bouton_envoyer" value="Envoyer"></button>
+                <button id="couleurBouton">Couleur</button>
+            </div>
+        </form>
     </body>
 
 
