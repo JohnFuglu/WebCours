@@ -1,11 +1,89 @@
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <script src="jeu.js"></script>>
+   
 </head>
 <body>
     <h4>Jeu</h4>
-
+    <div class="resultParams">
+        <p class="guesses"></p>
+        <p class=lastResult></p>
+        <p class=lowOrRight></p>
+    </div>
+    <div class="guessParams">
+        <label for="guessField">Enter a  guess:</label>
+        <input type="number" id="guessField" class="guessField">
+        <input type="submit" class=guessSub value="Submit guess">   
+    </div>
 </body>
+<script>
 
+let randomNumber= Math.floor(Math.random()*100)+1;
+const guesses= document.querySelector('.guesses');
+const lastResult= document.querySelector('.lastResult');
+const lowOrHigh= document.querySelector('.lowOrRight');
+
+const guessSub= document.querySelector('.guessSub');
+const guessField= document.querySelector('.guessField');
+
+let guessCount=1;
+let resetButton;
+
+
+guessSub.addEventListener('click',checkGuess);
+function resetGame(){
+    guessCount=1;
+    const resetParas= document.querySelectorAll('.resultParams p');
+    for(const resetPara of resetParas)
+        resetPara.textContent='';
+    resetButton.parentNode.removeChild(resetButton);
+    guessField.disabled=false;
+    guessSub.disabled=false;
+    guessField.value='';
+    guessField.focus();
+
+    lastResult.style.backgroundColor = 'white';
+    randomNumber = Math.floor(Math.random()*100)+1;
+
+}
+function setGameOver(){
+    guessField.disabled=true;
+    guessSub.disabled=true;
+    resetButton= document.createElement('button');
+    resetButton.textContent='start a new game';
+    document.body.append(resetButton);
+    resetButton.addEventListener('click',resetGame);
+}
+function checkGuess(){
+    const userGuess=Number(guessField.value);
+    if(guessCount===1)
+        guesses.textContent='previous guess';
+    guesses.textContent +=  `${userGuess} `; 
+
+    if(userGuess === randomNumber){
+        lastResult.textContent="Bravo c'est gagné";
+        lastResult.style.backgroundColor='green';
+        lowOrHigh.textContent='';
+        setGameOver();
+    }
+    else if(guessCount===10){
+        lastResult.textContent='!!!Game over!!!';
+        lowOrHigh.textContent='';
+        setGameOver();
+    }
+    else{
+        lastResult.textContent="Wrong!!!";
+        lastResult.style.backgroundColor='red';
+        if(userGuess < randomNumber)
+            lowOrHigh.textContent="Guess too low!";
+        else if(userGuess > randomNumber)
+            lowOrHigh.textContent="Guess too high!";
+    }
+    guessCount++;
+    guessField.value='';
+    guessField.focus();
+}
+
+</script>
 </html>

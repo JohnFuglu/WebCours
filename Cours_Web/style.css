@@ -9,7 +9,7 @@ header{
     font-size: large;}
 #boiteDessin{ border: 5px solid cyan;}
 #imgDessin{
-    max-height: var(auto,--tailleMax);
+    max-height: 100px;
 }
 #boiteModelage{    border: 5px solid red;}
 #imgModelage{
@@ -19,12 +19,9 @@ header{
 #boitePixel{    border: 5px dotted orange;    
 }
 #imgPixel{
-max-height: var(--sculptTaille);
+max-height: 100px;
 }
 #boiteSculpture{ border: 10px dashed blueviolet;}
 #imgSculpture{
-    max-height: var(--tailleMax);
-}
-.truc{
-    --tailleMax:0px;
+    max-height: 100px;
 }
