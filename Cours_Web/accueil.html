@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
+    <meta charset="utf-8">
     <title>Accueil</title>
     <header> 
         <a href="accueil.html"><h4>Accueil</h4></a>
         <a href="gallerie.html"><h4>Gallerie</h4></a>
         <a href="contact.html"><h4>Contact</h4></a>
         <a href="jeu.html"><h4>Jeu</h4></a>
-        <meta charset="utf-8">
-    <link rel ="stylesheet" href="Cours_Web/style.css">
+ 
+    <link rel ="styleSheet" href="style.css">
     </header>
    
     <body>
             <div id="boite_centrale"> 
-                <div id="boiteDessin"><img id="imgDessin" src="dessin.jpg" alt="un dessin"></div>
-                <div id="boiteSculpture"><img id="imgSculpture" src="sculpture.jpeg" alt="une sculpture"></div>
-                <div id="boiteModelage"><img id="imgModelage" src="modelage.jpg" alt="un modelage"></div>
-                <div id="boitePixel"><img id="imgPixel" src="pixel.png" alt="un pixelart"></div>
+                <div id="boiteDessin"><img id="imgDessin" src="img/dessin.jpg" alt="un dessin"></div>
+                <div id="boiteSculpture"><img id="imgSculpture" src="img/sculpture.jpeg" alt="une sculpture"></div>
+                <div id="boiteModelage"><img id="imgModelage" src="img/modelage.jpg" alt="un modelage"></div>
+                <div id="boitePixel"><img id="imgPixel" src="img/pixel.png" alt="un pixelart"></div>
      
             <div class="flexElement">
                 <div id="premier_texte"><p>Lorem ipsum dolor sit amet, 
@@ -38,7 +39,18 @@
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
                 officia deserunt mollit anim id est laborum.
                 </p></div>
+                <button id="quiBouton">Qui es-tu?</button>
+                <p id="quiTexte"></p>
             </div>      
          </div>
     </body>
+    <script>
+        const button= document.querySelector("#quiBouton");
+        const qui= document.querySelector('#quiTexte');
+
+        button.onclick = ()=>{
+            const name =prompt("Qui suis je ?");
+            qui.textContent= `Bonjour ${name.bold(œ)}`;
+        }
+    </script>
 </html>
