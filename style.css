@@ -1,0 +1,46 @@
+header{
+    background-color: green;
+    padding: 2%;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+.menu div{
+    float: left;
+    border: 2pt solid black;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.menu div.selectionnee{
+    font-weight: bold;
+    border-bottom: none;   
+    border-left: 2pt solid black;
+    border-right: 2pt solid black;
+    border-top: 2pt solid black;
+}
+.principal{
+    width: 100%;
+    position: relative;
+    clear:both;
+    
+}
+#livres{
+    width: 80%;
+}
+.livre{
+    float: left;
+    margin: 0.5em;
+    padding:1em;
+    width: 15em;
+}
+.livre img{
+    float: right; 
+    font-size: smaller;
+    
+}
+
+.news{
+    float: right;
+    width: 15%;
+}
