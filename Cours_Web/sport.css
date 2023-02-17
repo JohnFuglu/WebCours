@@ -1,7 +1,14 @@
 body{
+    display: flex;
+    flex-direction: column;
     padding: 50%;
     background-image: url(/Cours_Web/img/fond.png);
 }
 #nom{
+    float: left;
     font-size: large;
+}
+.rose{
+    background-color: pink;
+    padding: 2%;
 }

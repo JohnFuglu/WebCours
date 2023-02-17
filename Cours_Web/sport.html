@@ -2,21 +2,72 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <link rel="styleSheet" href="/Cours_Web/sport.css">
+    <style>
+    body{
+        display: flex;
+        flex-direction: column;
+        padding: 15%;
+        padding-left: 30%;
+        padding-right: 30%;
+      
+    }
+    #formulaire{
+        background-image: url(/Cours_Web/img/fond.png);
+    }
+    #label, #nom,#envoyer{
+        display: inline-block;
+        width: 12em;
+        font-weight: bold;
+    }
+    .legende{
+        background-color: yellow;
+    }
+    fieldset{
+        border: none;
+        background-color: pink;
+    }
+    #sexe{
+        display:flex;
+        flex-direction: column;
+        
+    }
+
+    </style>
 </head>
 <body>
+    <div id="formulaire">
     <form action="http://magym.com/inscription.php" method="get">
-        <label for="nom">Nom</label>
-        <input type="text" id="nom">
-        <label for="sexe">Sexe</label>
-        <input type="checkbox" id="sexe">
-        <label for="le_sport">Sport souhaité</label>
-        <select name="le_sport" id="le_sport">
-            <option>Karaté</option> 
-            <option>Judo</option>
-            <option>Remise en forme</option>
-            <option selected="selected">Karaté</option>
-        </select>
+        <label for="nom" id="label_nom">Nom</label>
+        <input type="text" id="nom">    
+        <input type="submit" id="envoyer">
+  
+        <fieldset id="sexe">
+            <legend class="legende"><h3>Indiquez votre Sexe</h3></legend>  
+                <label for="femme">Sexe</label>
+                <input type="radio" id="femme"> 
+                <label for="homme">Sexe</label>
+                <input type="radio" id="homme">
+        </fieldset>
+    <fieldset>
+        <legend class="legende"><h3>Choisir une ou plusieurs activité</h3></legend>
+    
+        <div class="rose">  
+           <div>
+                <label for="Karaté">Karaté</label>    
+                <input type="checkbox" id=Karaté> 
+            </div>
+            <div>
+                <label for="Judo">Judo</label>    
+                <input type="checkbox" id=Judo>
+            </div>
+            <div>
+                <label for="Remise_en_forme">Remise en forme</label>    
+                <input type="checkbox" id="Remise_en_forme">
+            </div>
+          
+        </div>           
+    </fieldset>
+    </div>
 </body>
 </form>
 </html>
