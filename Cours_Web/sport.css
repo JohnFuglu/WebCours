@@ -1,0 +1,7 @@
+body{
+    padding: 50%;
+    background-image: url(/Cours_Web/img/fond.png);
+}
+#nom{
+    font-size: large;
+}
