@@ -9,15 +9,6 @@
         padding: 15%;
         padding-left: 30%;
         padding-right: 30%;
-      
-    }
-    #formulaire{
-        background-image: url(/Cours_Web/img/fond.png);
-    }
-    #label, #nom,#envoyer{
-        display: inline-block;
-        width: 12em;
-        font-weight: bold;
     }
     .legende{
         background-color: yellow;
@@ -29,38 +20,62 @@
     #label_nom{
         font-size: 34pt;
         color: red;
+        display: inline-block;
+        font-weight: bold;
     }
-    #nom, #envoyer{
-        height: 2em;
-        display: inline-block;       
+    #nom{
+        display: inline-block;
+        position: relative;
+        right: -15em;
+        height: 2em;       
+    }
+    #envoyer{
+        position: relative;
+        right: -299px;
+        font-size: 2em; 
     }
     #sexe{
         display:flex;
         flex-direction: column;
+    }
+    .radio{
+        display: inline-flex;
         
     }
-
+    form{
+        border: 2px solid orange;
+        margin: 5px;
+        padding: 10px;
+        background-image: url("img/fond.png");
+        font-family: fantasy;
+    }
     </style>
 </head>
 <body>
-    <div id="formulaire">
+   
     <form action="http://magym.com/inscription.php" method="get">
         <label for="nom" id="label_nom">Nom</label>
         <input type="text" id="nom">    
         <input type="submit" id="envoyer">
   
         <fieldset id="sexe">
-            <legend class="legende"><h3>Indiquez votre Sexe</h3></legend>  
-                <label for="femme">Sexe</label>
-                <input type="radio" id="femme"> 
-                <label for="homme">Sexe</label>
-                <input type="radio" id="homme">
+           <legend class="legende"><h3>Indiquez votre Sexe</h3></legend>  
+                <p class="radio">
+                    <label for="homme">Homme</label>
+                    <input type="radio"> 
+                </p>
+
+                <p class="radio">
+                    <label for="homme">Homme</label>
+                    <input type="radio"> 
+                </p>
+            
         </fieldset>
-    <fieldset>
-        <legend class="legende"><h3>Choisir une ou plusieurs activité</h3></legend>
+        <fieldset>
+            <legend class="legende"><h3>Choisir une ou plusieurs activité</h3></legend>
     
-        <div class="rose">  
-           <div>
+            <div class="rose">  
+            <div>
                 <label for="Karaté">Karaté</label>    
                 <input type="checkbox" id=Karaté> 
             </div>
@@ -75,7 +90,7 @@
           
         </div>           
     </fieldset>
-    </div>
-</body>
 </form>
+</body>
+
 </html>
