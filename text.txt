@@ -1,0 +1,11 @@
+Ceci est le fichier de texte pour php
+2Ceci est le fichier de texte pour php
+3Ceci est le fichier de texte pour php
+4Ceci est le fichier de texte pour php
+5Ceci est le fichier de texte pour php
+6Ceci est le fichier de texte pour php
+7Ceci est le fichier de texte pour php
+8Ceci est le fichier de texte pour php
+9Ceci est le fichier de texte pour php
+10Ceci est le fichier de texte pour php
+

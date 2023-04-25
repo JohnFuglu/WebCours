@@ -1,0 +1,4 @@
+Brusciano:Florent:fbrusciano@yahoo.fr
+Ballmer:Steve:sballmer@microsoft.com
+Gates:Bill:bgates@microsoft.com
+Cook:Tim:tcook@apple.com
